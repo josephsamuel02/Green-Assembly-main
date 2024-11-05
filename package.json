@@ -1,0 +1,49 @@
+{
+  "name": "reacttypescript",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "watch:tailwindcss": "tailwindcss -i src/index.css -o public/style.css --minify -w",
+    "build:tailwindcss": "tailwindcss -i  src/index.css -o public/style.css --minify",
+    "dev": "vite",
+    "start": "concurrently --kill-others \"npm run dev\"  \" npm run watch:tailwindcss\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.tsx",
+    "lint-fix": "eslint src/**/*.tsx --fix"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "express": "^4.18.3",
+    "firebase": "^10.8.1",
+    "mongoose": "^8.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-paystack": "^5.0.0",
+    "react-photo-album": "^2.3.1",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.4.2",
+    "react-toastify": "^10.0.5",
+    "typewriter-effect": "^2.21.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-draft-wysiwyg": "^1.13.8",
+    "@types/uuid": "^9.0.8",
+    "@vitejs/plugin-react": "^2.1.0",
+    "autoprefixer": "^10.4.12",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.0",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
